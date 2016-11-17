@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>EmbVwr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="font/outicons-basic.css" />
+	  
+  </head>
+  <body>     
+
+     <div id="pagecontent">
+       <div id="pagecontentwrapper">
+         <div id="molvwr-container"></div>
+         <div id="loadingstate">loading...</div>
+         <div id="overlay" class="panel"></div>
+         <div id="molecule-choice-panel" class="panel leftitemspanel"></div>
+         <div id="viewmode-choice-panel" class="panel leftitemspanel"></div>
+         <div id="description-panel" class="panel leftitemspanel">
+           <div id="formula"></div>
+           <div id="formularemark">
+             Show Embryo
+           </div>
+           <div id="atomslegend"></div>
+           <div id="moleculedesc"></div>
+         </div>
+         <div id="screencapture-panel" class="panel rightitemspanel">
+         	<img id="screencapture" />
+         	<p>right click to save picture, and don't forget to give us credits for this !</p>
+         </div>
+         <div id="about-panel" class="panel rightitemspanel">
+           <h1>Embryo Viewer</h1>
+           <p>Modified from MolVwr with added functionality to display embryos. Developed by @Kurekaoru at @ZhaoLab_HKBU</p>
+           <p>If you are interested in using Molvwr in your website, please go the <a href="http://gleborgne.github.io/molvwr/embedexample.html">integration sample page</a>.</p>
+         </div>         
+       </div>
+     </div>
+	   <div id="pagetitle">          
+          <div id="moleculetitle" class="noselect" unselectable="on"></div>
+          <div id="pageactions">
+            <div id="viewmodetitle" class="iconbtn noselect oi-eye" unselectable="on"></div>
+            <div id="moleculeinfo" class="iconbtn noselect oi-info" unselectable="on"></div>          
+            <div class="space"></div>
+            <div id="savepic" class="iconbtn oi-photo"></div>
+            <div id="about" class="oi-help noselect iconbtn" unselectable="on"></div> 
+          </div>
+     </div>
+	   <div id="controlbar">          
+            <div class="space"></div>
+          </div>
+     </div>
+     <script src="lib/hand.js"></script>
+     <script src="lib/babylon.js"></script>
+     <script src="lib/molvwr.js"></script>
+     <script src="molecules.js"></script>
+     <script src="index.js"></script>
+  </body>
+</html>
