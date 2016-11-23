@@ -48,9 +48,24 @@ var MolvwrSamples = MolvwrSamples || {};
 		ctrl.openDetail(this.items);
 	}
 
+	/////////////////////////////////////////////////////////////////////////////////////
+	function ControlPanel(element, titleElement, viewer, items, onselected){
+		var ctrl = this;
+		this.viewer = viewer;
+
+		this.contentPanel = document.createElement("DIV");
+		this.contentPanel.className = "panel-content";
+		this.element.appendChild(this.contentPanel);
+
+		this.titleElement.onclick = function(){
+			showPanel(ctrl.element);
+		}
+		ctrl.openDetail(this.items);
+	}
+	//////////////////////////////////////////////////////////////////////////////////////
+
 	ChoicePanel.prototype.renderItems = function(items, parent){
 		var ctrl = this;
-		
 
 		items.forEach(function(item){
 			var sampleitem = document.createElement("DIV");
@@ -168,7 +183,7 @@ var MolvwrSamples = MolvwrSamples || {};
 		overlay.classList.remove("visible");
 	}
 
-
+	var querypanel = document.getElementById("cell-query-panel");
 	var samplespanel = document.getElementById("molecule-choice-panel");
 	var aboutpanel = document.getElementById("about-panel");
 	var aboutlink = document.getElementById("about");
@@ -252,7 +267,7 @@ var MolvwrSamples = MolvwrSamples || {};
 		//moleculeinfo.classList.add("visible");
 	});
 
-	var currentmolecule = "cyanocobalamin";
+	var currentmolecule = "130619PHA4p2_100";
 	if (window.location.hash){
 		var item = samplespanelctrl.getItemById(window.location.hash.substr(1));
 		if (item){

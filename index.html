@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>EmbVwr</title>
@@ -9,12 +10,12 @@
 	  
   </head>
   <body>     
-
      <div id="pagecontent">
        <div id="pagecontentwrapper">
          <div id="molvwr-container"></div>
          <div id="loadingstate">loading...</div>
          <div id="overlay" class="panel"></div>
+         <div id="cell-query-panel" class="panel leftitemspanel"></div>
          <div id="molecule-choice-panel" class="panel leftitemspanel"></div>
          <div id="viewmode-choice-panel" class="panel leftitemspanel"></div>
          <div id="description-panel" class="panel leftitemspanel">
@@ -54,6 +55,7 @@
      <script src="lib/babylon.js"></script>
      <script src="lib/molvwr.js"></script>
      <script src="molecules.js"></script>
+     <script src="sql.js"></script>
      <script src="index.js"></script>
   </body>
 </html>
